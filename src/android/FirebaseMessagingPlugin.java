@@ -1,15 +1,21 @@
 package by.chemerisuk.cordova.firebase;
 
+import android.app.NotificationManager;
+import android.app.NotificationChannel;
+
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.ContentResolver;
+
+import android.media.AudioAttributes;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.content.SharedPreferences;
-import android.content.ContentResolver;
+
 import android.support.v4.app.NotificationManagerCompat;
-import android.app.NotificationManager;
-import android.app.NotificationChannel;
+
 
 import by.chemerisuk.cordova.support.CordovaMethod;
 import by.chemerisuk.cordova.support.ReflectiveCordovaPlugin;
