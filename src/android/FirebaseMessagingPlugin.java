@@ -2,6 +2,7 @@ package by.chemerisuk.cordova.firebase;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os;
 import android.os.Bundle;
 import android.util.Log;
 import android.content.SharedPreferences;
