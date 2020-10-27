@@ -46,7 +46,7 @@ public class FirebaseMessagingPlugin extends ReflectiveCordovaPlugin {
     protected void pluginInitialize() {
         FirebaseMessagingPlugin.instance = this;
 
-        notificationManager = getSystemService(cordova.getActivity(), NotificationManager.class);
+        notificationManager = this.getSystemService(cordova.getActivity(), NotificationManager.class);
         lastBundle = getNotificationData(cordova.getActivity().getIntent());
     }
 
