@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.content.SharedPreferences;
+import android.content.ContentResolver;
 import android.support.v4.app.NotificationManagerCompat;
 import android.app.NotificationManager;
 import android.app.NotificationChannel;
