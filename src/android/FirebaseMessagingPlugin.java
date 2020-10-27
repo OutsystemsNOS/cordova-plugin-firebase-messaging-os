@@ -16,7 +16,6 @@ import android.util.Log;
 
 import android.support.v4.app.NotificationManagerCompat;
 
-
 import by.chemerisuk.cordova.support.CordovaMethod;
 import by.chemerisuk.cordova.support.ReflectiveCordovaPlugin;
 
@@ -35,7 +34,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+
+import java.util.List;
 import java.util.Set;
+
 import me.leolin.shortcutbadger.ShortcutBadger;
 
 
