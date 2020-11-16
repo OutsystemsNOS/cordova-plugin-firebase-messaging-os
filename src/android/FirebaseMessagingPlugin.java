@@ -72,7 +72,6 @@ public class FirebaseMessagingPlugin extends ReflectiveCordovaPlugin {
                     JSONObject object = new JSONObject();
                     object.put("isEnabled", areNotificationsEnabled);
                 } catch (Exception e) {
-                    Crashlytics.logException(e);
                     callbackContext.error(e.getMessage());
                 }
             }
