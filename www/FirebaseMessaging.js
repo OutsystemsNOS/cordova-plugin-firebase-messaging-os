@@ -8,6 +8,11 @@ module.exports = {
             exec(resolve, reject, PLUGIN_NAME, "subscribe", [topic]);
         });
     },
+    hasPermission: function () {
+        return new Promise(function(resolve, reject) {
+            exec(resolve, reject, PLUGIN_NAME, "hasPermission", []);
+        });
+    },
     unsubscribe: function(topic) {
         return new Promise(function(resolve, reject) {
             exec(resolve, reject, PLUGIN_NAME, "unsubscribe", [topic]);
