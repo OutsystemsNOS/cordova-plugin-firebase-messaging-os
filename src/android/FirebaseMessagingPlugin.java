@@ -60,7 +60,25 @@ public class FirebaseMessagingPlugin extends ReflectiveCordovaPlugin {
         notificationManager = cordova.getActivity().getSystemService(NotificationManager.class);
         lastBundle = getNotificationData(cordova.getActivity().getIntent());
     }
-
+    
+    @CordovaMethod
+    private void hasPermission(final CallbackContext callbackContext) {
+        cordova.getThreadPool().execute(new Runnable() {
+            public void run() {
+                try {
+                    Context context = cordova.getActivity();
+                    NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
+                    boolean areNotificationsEnabled = notificationManagerCompat.areNotificationsEnabled();
+                    JSONObject object = new JSONObject();
+                    object.put("isEnabled", areNotificationsEnabled);
+                } catch (Exception e) {
+                    Crashlytics.logException(e);
+                    callbackContext.error(e.getMessage());
+                }
+            }
+        });
+    }
+    
     @CordovaMethod
     private void subscribe(String topic, final CallbackContext callbackContext) {
         FirebaseMessaging.getInstance().subscribeToTopic(topic)
