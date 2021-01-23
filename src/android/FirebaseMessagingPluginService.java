@@ -41,7 +41,7 @@ public class FirebaseMessagingPluginService extends FirebaseMessagingService {
     private int defaultNotificationColor;
     private String defaultNotificationChannel;
 
-    @Override
+    //@Override
     public void onCreate() {
         broadcastManager = LocalBroadcastManager.getInstance(this);
         notificationManager = ContextCompat.getSystemService(this, NotificationManager.class);
