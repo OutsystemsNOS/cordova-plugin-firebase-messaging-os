@@ -48,7 +48,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <header-file src="src/ios/FirebaseMessagingPlugin.h" />
         <source-file src="src/ios/FirebaseMessagingPlugin.m" />
 
-        <framework src="Firebase/Messaging" type="podspec" spec="~> 6.32.2" />
+        <!-- <framework src="Firebase/Messaging" type="podspec" spec="~> 6.32.2" /> -->
+        <framework src="Firebase/Messaging" type="podspec" spec="7.11.0" />       
         
     </platform>
 
